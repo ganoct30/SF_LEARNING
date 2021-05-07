@@ -4,24 +4,13 @@
 
 with customers as (
 
-    select
-        id as customer_id,
-        first_name,
-        last_name
-
-    from DBT.jaffle_shop.customers
+    select * from {{ ref(customer_stg) }}
 
 ),
 
 orders as (
 
-    select
-        id as order_id,
-        user_id as customer_id,
-        order_date,
-        status
-
-    from DBT.jaffle_shop.orders
+    select * from {{ ref(order_stg) }}
 
 ),
 
