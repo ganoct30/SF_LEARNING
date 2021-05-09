@@ -9,4 +9,4 @@ with customers as (
 
 )
 
-SELECT * FROM customers;
+SELECT * FROM customers

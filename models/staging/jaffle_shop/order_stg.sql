@@ -1,4 +1,4 @@
-orders as (
+with orders as (
 
     select
         id as order_id,
@@ -10,4 +10,4 @@ orders as (
 
 )
 
-SELECT * FROM orders;
+SELECT * FROM orders
