@@ -5,7 +5,7 @@ with customers as (
         first_name,
         last_name
 
-    from DBT.jaffle_shop.customers
+    from {{ source('jaffle_shop','customers')}}
 
 )
 
