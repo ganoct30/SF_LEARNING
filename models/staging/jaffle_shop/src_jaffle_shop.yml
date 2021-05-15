@@ -1,6 +1,9 @@
+
+version: 2
+
 sources:
   - name: jaffle_shop
-    database: raw
+    database: DBT
     tables:
       - name: customers
         columns:
@@ -13,3 +16,7 @@ sources:
           error_after: {count: 24, period: hour}
         columns:
           - name: id
+  - name: stripe
+    database: DBT
+    tables:
+      - name: payment
